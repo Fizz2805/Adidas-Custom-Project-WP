@@ -1,0 +1,2131 @@
+/*!
+Theme Name: wpBrigade challenge
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wpbrigade-challenge
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+wpBrigade challenge is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+	 margin: 0; 
+	 padding: 0;
+            font-family: 'Poppins', sans-serif;
+	background-color:#4169e1 ; 
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+	display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+ 
+ /* -------//TOP NAVIGATION STYLING START----------  */
+
+.top-navigation-content {
+    color: black;
+    text-align: center;
+    margin-top: 20px; /* Adjust this value to your preference */
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-content-text {
+    margin-right: 100px; /* Space between text and image */
+}
+
+.nav-content-image {
+    max-width: 100px; /* Adjust the image size as needed */
+    height: auto;
+
+}
+ /* -------//TOP NAVIGATION STYLING END----------  */
+
+
+  /* -------//LOGO STYLING START----------  */
+.site-logo img {
+    max-height: 60px; /* Ensure the logo fits within the header height */
+	padding: 10px 30px;
+    /* width: auto;  */
+	 width: 200px; 
+	margin-left: 200px;
+
+}
+
+@media (max-width: 768px) {
+    .site-logo img {
+        max-height: 40px; /* Adjust logo size for smaller screens */
+    }
+}
+ /* -------//LOGO STYLING END----------  */
+
+
+/* -------//HEADER STYLING START----------  */
+.header-background {
+    background-size: cover;
+    background-position: center;
+    padding: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	
+}
+
+
+ .header {
+	display: flex;
+	align-items: center; /* Center items vertically */
+	justify-content: space-between; /* Space between logo and menu */
+  }
+/* -------//HEADER STYLING START----------  */
+
+
+
+/* -------//SECONDARY MENU STYLING START----------  */
+  .secondary-menu {
+	padding-right: 160px; 
+  }
+  
+ .secondary-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px; 
+
+	justify-content: flex-start; 
+}
+.secondary-menu li:first-child a {
+    background: #145932;
+  }
+ .secondary-menu a {
+	text-decoration: none;
+	background: #084129;
+	border: 1px solid #084129;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	padding: 10px 30px;
+	transition: background-color 0.3s ease;
+	color: white !important; 
+  font-weight: bold; 
+	
+	clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+	z-index: -1;
+} 
+/* -------//SECONDARY MENU STYLING END----------  */
+/* .secondary-menu {
+    display: flex;
+    align-items: center;
+} */
+
+
+
+
+/* Ensure primary menu is below the header banner */
+.primary-menu-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100%;
+    background-color: #0a7c37;
+    /* padding: 10px 20px; */
+    color: #fff;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+    position: relative;
+    /* z-index: 5; */
+
+	z-index: 10; /* Ensure it's above other elements */
+}
+
+.primary-menu {
+    display: flex;
+    position: relative;
+	z-index: 15; /* Ensure it's above other elements */
+}
+
+
+
+
+
+.primary-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	margin-left: 140px;
+}
+
+.primary-menu li {
+    position: relative;
+}
+
+.primary-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+	
+}
+
+.primary-menu li a:hover {
+      background-color: #0a7c37; 
+	   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+	  z-index: -1; 
+}
+.primary-menu .sub-menu li a:hover {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+	background-color: #11512f;
+  
+}
+
+.primary-menu .sub-menu {
+    /* display: none;
+    position: absolute;
+    background-color: #0a7c37; 
+    z-index: 5; */
+	display: none;
+	position: absolute;
+	top: 100%; /* Ensure the dropdown appears below the parent item */
+	left: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background-color: #0a7c37; 
+	border: 1px solid #0a7c37;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	width: 200px; /* Adjust width as needed */
+	z-index: 1000; /* Ensure dropdown appears above other elements */
+	font-weight: lighter;
+	padding: 8px 0px;
+}
+
+.primary-menu .sub-menu .sub-menu {
+    left: 100%;
+    top: 0;
+}
+
+.primary-menu .menu-item-has-children:hover > .sub-menu {
+    display: block;
+}
+
+/* .primary-menu .menu-item-has-children > a::after {
+    content: "\2192";
+    margin-left: 5px;
+} */
+.primary-menu .menu-item-has-children > a::after {
+    content: "\f105"; /* Font Awesome angle right icon */
+    font-family: 'Font Awesome 5 Free'; /* Use Font Awesome font family */
+    font-weight: 900; /* For solid icons */
+    margin-left: 8px;
+    font-size: 12px; /* Adjust size as needed */
+    color: #ccc; /* Grey color for the icon */
+}
+
+/* Display primary menu when hamburger is clicked */
+.primary-menu.open {
+    display: flex;
+}
+
+/* .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input[type="search"] {
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    position: absolute;
+    left: 5px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.search-bar button:focus {
+    outline: none;
+} */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 70px; /* Shift the search bar towards the left */
+	z-index: 5; /* Ensure it’s below the primary menu */
+}
+
+.search-bar input[type="search"] {
+    padding: 5px 10px 5px 35px; /* Increase padding to avoid overlap with icon */
+    border: 1px solid #012c1f; /* Darker border for visibility */
+    border-radius: 4px;
+    background-color: #012c1f; /* Background color */
+    color: #ccc; /* Grey text color */
+    width: 230px; /* Set a specific width for consistency */
+}
+
+/* .search-bar button {
+    position: absolute;
+    right: 15px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ccc; 
+	
+} */
+.search-bar button {
+    position: absolute;
+    right: 15px; /* Adjusted to ensure icon does not overlap text */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ccc; /* Grey color for the search icon */
+    font-size: 16px; /* Adjust size as needed */
+}
+.search-bar button:focus {
+    outline: none;
+}
+
+.search-bar button::before {
+    /* content: "\1F50D"; 
+    font-size: 16px;  */
+	content: "\f002"; /* Font Awesome search icon */
+    font-family: 'Font Awesome 5 Free'; /* Use Font Awesome font family */
+    font-weight: 900; /* For solid icons */
+}
+.search-field {
+    font-family: 'Poppins', sans-serif;
+    /* Additional styling as needed */
+}
+
+/* .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;  Ensure it's above other elements 
+	z-index: 15; 
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .primary-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-menu.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+} */
+
+/* Hide primary menu on mobile by default */
+@media (max-width: 768px) {
+    .primary-menu {
+        display: flex; /* Keep the layout consistent */
+        flex-direction: column; /* Stack items vertically on mobile */
+        width: 100%; /* Full width on mobile */
+        background-color: #0a7c37; /* Background color to match primary menu */
+        position: absolute; /* Position it absolutely within the container */
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        padding: 0;
+        margin: 0;
+        transform: translateY(-100%); /* Hide menu off-screen */
+        transition: transform 0.3s ease; /* Smooth transition */
+        z-index: 20; /* Ensure it's above other elements */
+    }
+
+    /* Display the primary menu when the hamburger is clicked */
+    .primary-menu.open {
+        transform: translateY(0); /* Slide menu into view */
+    }
+}
+
+/* Styles for hamburger menu */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 15; /* Ensure it's above the primary menu */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+}
+
+/* Show hamburger menu on mobile screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show the hamburger menu on mobile screens */
+    }
+}
+.hamburger {
+    background-color: red; /* Temporary color to see if the element is visible */
+}
+
+/* .primary-menu {
+    background-color: blue; 
+} */
+
+
+
+.custom-separator {
+    height: 1px;
+	background-color: rgba(255, 255, 255, 0.5);  /* Adjust color as needed */
+   /* Adjust spacing as needed */
+    width: 100%;
+	
+}
+
+/* recent post start */
+
+.recent-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.single-post {
+    background-color: #0b7d37; /* Set the background color */
+    /* padding: 15px; */
+    width: calc(33.333% - 20px); /* Adjust the width as needed */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-thumbnail {
+    width: 100%;
+    height: 150px; /* Set a fixed height */
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+    display: block;
+}
+
+.post-content {
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-title {
+	/* padding:5px;
+    margin-top: 5px;
+    font-size: 1em; */
+
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post-title h2 {
+	padding:15px;
+    margin: 0;
+    color: #fff;
+	font-weight: 500;
+}
+
+.post-excerpt {
+	padding:15px;
+    margin-top: 1px;
+    font-size: 1em;
+    color: #fff;
+}
+
+/* .read-more {
+    margin-top: 10px;
+    align-self: flex-start; 
+	background-color: #fff;
+	padding:15px;
+}
+
+.read-more a {
+    text-decoration: none;
+    color: #0073aa; 
+    font-weight: bold;
+
+
+} */
+
+.read-more {
+    margin-top: 10px;
+    background-color: #165b34;
+    padding: 15px;
+    width: 100%; /* Make it stretch to the full width */
+    box-sizing: border-box; /* Ensure padding is included in the total width */
+    text-align: center; /* Center-align the text inside the button */
+}
+
+.read-more a {
+    text-decoration: none;
+    color: #fff !important; /* Link color */
+    font-weight: bold;
+    display: block; /* Make the link a block element */
+}
+
+.read-more a:hover {
+    color: #fff; /* Hover color */
+}
+
+
+/* Sidebar area */
+
+.main-container {
+    /*width: 100%;
+    padding: 20px; /* Adjust padding as needed */
+    /*box-sizing: border-box; /* Ensure padding and border are included in the total width */
+    flex: 1; /* Main content takes up the remaining space */
+    margin-right: 20px; /* Space between content and sidebar */
+}
+
+/* Main content area container */
+.content-area {
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 20px; /* Space between the content and sidebar */
+    justify-content: space-between;
+    /* Adjust as needed */
+  
+}
+#secondary {
+    width: 280px; /* Adjust the width of the sidebar */
+	padding: 20px;
+}
+
+/* event widget styling */
+
+/* .event{
+	padding: 25px;
+}
+.event-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+} */
+.event {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 20px; Space between events */
+    color: #fff;
+    background-image: url('<?php echo get_template_directory_uri() . "/assets/images/pettern-1.png"; ?>');
+    padding: 10px;
+	height: 100px; 
+	position: relative; /* Ensure the label is positioned relative to this div */
+	
+    /* border-radius: 5px; Optional: rounded corners */
+}
+
+.event-label {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+	top: -30px;
+    background-color: #333; /* Change this to your preferred background color */
+    color: #fff;
+    padding: 5px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+	width: 100%; /* Make it stretch to the full width */
+	font-family: 'Oswald', sans-serif;
+}
+/* .event h3 {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    text-align: left;
+    padding: 8px 20px;
+} */
+
+/* Image styling */
+.event img {
+    width: 50px; /* Fixed width for image */
+    height: 50px; /* Fixed height for image */
+    object-fit: cover; /* Ensure image fits within the area */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Event details styling */
+.event-details {
+    flex: 1; /* Take up remaining space */
+	/* margin-top: 10px; */
+	font-family: 'Oswald', sans-serif;
+	margin-top: 0; /* Remove margin-top */
+	
+}
+
+.event-details p{
+    color: rgba(255, 255, 255, 0.473);
+	font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+	margin-top: 15px;
+	margin: 0;
+}
+
+.event-details h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.473);
+    margin: 0;
+	font-weight: 350;
+	margin-top: 15px;
+	margin: 0; /* Remove margin from the title */
+
+    /* margin-bottom: 5px; */
+}
+
+/* Event widget arrows styling */
+.prev-events, .next-events {
+    position: relative; /* Ensure pseudo-elements are positioned relative to the button */
+    top: 18%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    background-color: transparent;
+    padding: 10px; /* Add padding for the background color */
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Border background color */
+.prev-events::before, .next-events::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0ca341; /* Set your desired background color */
+    /* border-radius: 50%; Optional: make the background a circle */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    z-index: -1; /* Ensure the background is behind the arrow icon */
+}
+
+/* Arrow symbols */
+.prev-events::after, .next-events::after {
+    position: relative; /* Ensure the arrow icon is positioned relative to the button */
+    content: '\f053'; /* Font Awesome left arrow icon for prev-events */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: white; /* Arrow color */
+    z-index: 1; /* Ensure the arrow icon is above the background */
+}
+
+.next-events::after {
+    content: '\f054'; /* Font Awesome right arrow icon for next-events */
+}
+
+.prev-events {
+    left: 0;
+}
+
+.next-events {
+    right: 0;
+}
+
+.widget widget_events_widget{
+	background-color: #005177;
+}
+/* event widget styling end */
+
+/* categories widget styling end  */
+/* Container for the categories widget */
+/* categories widget styling end  */
+/* Container for the categories widget */
+#block-6 {
+    padding: 20px; /* Space inside the widget */
+    margin-bottom: 20px; /* Space below the widget */
+	
+    position: relative; /* Allows positioning of the label */
+    color: #fff;
+    background-image: url('assets/images/pettern-1.png');
+}
+
+.wp-block-heading {
+    background-image: url('assets/images/pettern-3.png');
+    background-color: #fff !important; /* Background color for the label */
+    color: #fff; /* Text color for the label */
+    padding: 5px 10px; /* Space inside the label */
+    font-size: 20px; /* Font size for the label */
+    font-weight: 600; /* Make the label text bold */
+    margin-bottom: 15px; /* Space below the label */
+    position: absolute; /* Position label on top of the widget */
+    top: -30px; /* Move label up */
+    left: 0; /* Align label with content */
+    width: 100%; /* Make it stretch to the full width */
+    z-index: 10; /* Ensure label is above other content */
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Style for the list of categories */
+.wp-block-categories-list {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Style for each category item */
+.wp-block-categories-list .cat-item {
+    padding: 10px 0; /* Space around each category item */
+    position: relative; /* For positioning the arrow */
+}
+
+/* Remove the border for the last item */
+.wp-block-categories-list .cat-item:last-child {
+    border-bottom: none;
+}
+
+/* Style for category links */
+.wp-block-categories-list .cat-item a {
+    color: #fff; /* Color of the category link */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for category links */
+    display: inline-block; /* To position the arrow */
+    padding-left: 20px; /* Space for the arrow */
+    position: relative;
+}
+
+/* Add arrow icon to the left of each category link */
+.wp-block-categories-list .cat-item a::before {
+	content: '\f054'; /* Font Awesome right arrow icon */
+    font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is loaded */
+    /* font-weight: 900; Bold arrow */
+	font-weight: 900;
+    font-size: 14px; /* Size of the arrow */
+    color: #fff; /* Color of the arrow */
+    position: absolute; /* Position the arrow */
+    left: 0; /* Align arrow to the left */
+    top: 50%; /* Center the arrow vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+/* Hover effect for category links */
+.wp-block-categories-list .cat-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #E1D9D1; /* Darker color on hover */
+}
+/* categories widget styling end  */
+
+/* weather widget styling start */
+/* .weather-widget {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-widget img {
+    width: 50px;
+    height: 50px;
+} */
+
+/* wreather widget styling */
+.weather-widget-block {
+    padding: 15px; /* Reduce padding inside the widget */
+    margin-bottom: 20px; /* Space below the widget */
+    position: relative; /* Allows positioning of the label */
+    background-image: url('assets/images/pettern-1.png');
+}
+
+.weather-widget-block-heading {
+    background-image: url('assets/images/pettern-3.png');
+    background-color: #fff !important; /* Background color for the label */
+    color: #fff; /* Text color for the label */
+    padding: 5px 10px; /* Space inside the label */
+    font-size: 20px; /* Font size for the label */
+    font-weight: 600; /* Make the label text bold */
+    margin-bottom: 15px; /* Space below the label */
+    position: absolute; /* Position label on top of the widget */
+    top: -10px; /* Move label up */
+    left: 0; /* Align label with content */
+    width: 100%; /* Make it stretch to the full width */
+    z-index: 10; /* Ensure label is above other content */
+    font-family: 'Oswald', sans-serif;
+}
+
+.weather-widget {
+    background-image: url('assets/images/pettern-1.png');
+    background: #0586ac;
+    border-radius: 35px;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px; /* Reduce padding inside the widget */
+    text-align: center;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    max-width: 250px; /* Set a maximum width */
+    margin: 0 auto; /* Center align the widget */
+    margin-top: 40px; /* Add margin to the top to create space */
+}
+
+.weather-title {
+    font-size: 14px; /* Reduce font size */
+    font-weight: bold;
+    margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon {
+    width: 50px; /* Reduce width */
+    height: 50px; /* Reduce height */
+    margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+.weather-temp {
+    font-size: 20px; /* Reduce font size */
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.weather-description {
+    font-size: 14px; /* Reduce font size */
+    /* color: #555; */
+    font-weight: lighter;
+    text-decoration-color: rgba(255, 255, 255, 0.473);
+}
+
+.weather-error {
+    color: red;
+    font-weight: bold;
+}
+
+/* weather widget styling end */
+
+/* Date and time widget styling start */
+
+
+/* Date and time widget styling end */
+
+/* .date-time-widget {
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.date-time-widget .current-date {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date-time-widget .current-time {
+    font-size: 20px;
+    color: #0073aa;
+    font-weight: bold;
+}
+
+.date-time-error {
+    color: red;
+    font-weight: bold;
+} */
+
+
+/* Date and Time Widget Styling */
+/* Date and Time Widget Styling */
+/* .date-time-widget-block {
+    padding: 25px;
+    margin-bottom: 20px;
+    background-image: url('assets/images/pettern-1.png');
+    position: relative;
+}
+
+.date-time-widget-block-heading {
+    background-image: url('assets/images/pettern-3.png');
+    background-color: #fff !important;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    font-family: 'Oswald', sans-serif;
+}
+
+.date-time-widget {
+   
+    
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.date-time-date {
+    
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.date-time-time {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: #666;
+}
+
+.date-time-error {
+    color: red;
+    font-weight: bold;
+} */
+
+.date-time-widget-block {
+    padding: 15px; /* Reduced space inside the widget */
+    margin-bottom: 10px; /* Reduced space below the widget */
+    position: relative; /* Allows positioning of the label */
+    background-image: url('assets/images/pettern-1.png');
+}
+
+.date-time-widget-block-heading {
+    background-image: url('assets/images/pettern-3.png');
+    background-color: #fff !important; /* Background color for the label */
+    color: #fff; /* Text color for the label */
+    padding: 5px 8px; /* Space inside the label */
+    font-size: 20px; /* Font size for the label */
+    font-weight: 600; /* Make the label text bold */
+    margin-bottom: 15px; /* Space below the label */
+    position: absolute; /* Position label on top of the widget */
+    top: -10px; /* Move label up */
+    left: 0; /* Align label with content */
+    width: 100%; /* Make it stretch to the full width */
+    z-index: 10; /* Ensure label is above other content */
+    font-family: 'Oswald', sans-serif;
+}
+
+.date-time-widget {
+    padding: 5px; /* Reduced padding inside the widget */
+    text-align: center;
+}
+
+.date-time-date {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2px; /* Reduced space between date and time */
+    font-family: 'Oswald', sans-serif;
+}
+
+.date-time-time {
+    text-align: left;
+    font-size: 34px; /* Reduced font size */
+    color: #fff;
+    font-weight: 900;
+    margin-top: 2px; /* Reduced margin-top to lessen space */
+    margin-bottom: 0; /* Remove space between time and bottom of block */
+}
+
+.date-time-error {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* categories widget styling end  */
+/* footer styling */
+/* .footer-widgets {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-column {
+    width: 30%;
+} */
+
+/* Space before the Site Map title */
+.footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px; /* Adjust this value to reduce space between columns */
+}
+.footer-column-1 .widget-title {
+    margin-top: 50px;
+    margin-bottom: 20px; /* Adjust the space as needed */
+    color: white; /* Title color */
+    /* padding-left: 180px; */
+
+    padding-left: 180px; /* Adjust this value as needed */
+}
+
+/* Styling for the Site Map heading */
+.footer-column-1 .footer-menu {
+    color: #fff; /* Default color for menu links */
+    /* padding-left: 180px; */
+    padding-left: 180px; /* Adjust this value as needed */
+    margin-bottom: 50px;
+}
+
+.footer-column-1 .footer-menu a {
+    color: #d0ddd8;  /* Link color */
+    text-decoration: none; /* Remove text underline */
+}
+
+/* Add arrow icon to the left of each menu item */
+.footer-column-1 .footer-menu ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column-1 .footer-menu ul li {
+    position: relative;
+    padding-left: 20px; /* Space for the arrow icon */
+    margin-bottom: 10px; /* Adjust the space between menu items as needed */
+}
+
+.footer-column-1 .footer-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-column-1 .footer-menu ul li::before {
+    content: '\f054'; /* Unicode for arrow icon (FontAwesome example) */
+    font-family: 'FontAwesome'; /* Ensure FontAwesome is loaded */
+    position: absolute;
+    font-size: 12px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Arrow color */
+}
+
+/* Add styling for hover effects if needed */
+.footer-column-1 .footer-menu a:hover {
+    color: #fff; /* Change color on hover if desired */
+}
+
+/* footer LINK widget :start */
+
+
+
+/* Styling for the footer links widget */
+.footer-column-2 .widget-title {
+    margin-bottom: 20px; /* Space before the title */
+    color: white; /* Title color */
+    margin-top: 50px;
+    margin-left: 0;
+    
+    
+    /* padding-left: 150px; */
+}
+
+/* Styling for the links */
+.footer-column-2 ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column-2 ul li {
+    position: relative;
+    padding-left: 20px; /* Space for the arrow icon */
+    margin-bottom: 15px; /* Space between links */
+}
+
+/* Arrow icon styling */
+.footer-column-2 ul li::before {
+    content: '\f054'; /* Unicode for arrow icon (FontAwesome example) */
+    font-family: 'FontAwesome'; /* Ensure FontAwesome is loaded */
+    position: absolute;
+    font-size: 12px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white; /* Arrow color */
+}
+
+/* Link styling */
+.footer-column-2 ul li a {
+    /* color: white; Link color */
+    color: #d0ddd8;  /* Link color */
+    text-decoration: none; /* Remove text underline */
+}
+
+.footer-column-2 ul li a:hover {
+    color: #FFF; /* Change color on hover if desired */
+}
+
+
+/* footer widget 3 :start */
+
+.footer-column-3{
+padding-right: 40px;
+}
+.footer-column-3 img {
+    margin-top: 50px;
+    display: block;
+    margin-bottom: 40px; /* Adjust space below image as needed */
+    margin-left: 30px;
+}
+
+.footer-column-3 p {
+    /* color: white; Default text color */
+    color: #d0ddd8;
+    margin-bottom: 10px; /* Adjust space between paragraphs as needed */
+    text-align: center;
+    
+}
+
+.footer-column-3 a {
+    color: #d0ddd8; /* Link color */
+    text-decoration: none; /* Remove text underline */
+}
+
+.footer-column-3 a:hover {
+    color: #fff; /* Change color on hover if desired */
+}
+
+.footer-column-3 a:visited {
+    color: #d0ddd8; /* Set the same color for visited links */
+}
+/* footer widget 3 end */
+
+
+
+/* footer link widget end */
+
+
+/* discalimer setting start */
+.footer-disclaimer {
+    background-image: url('assets/images/pettern-2.png');
+    text-align: left;
+    color: #d0ddd8;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333; /* Adjust background color as needed */
+    /* margin-bottom: 10px; */
+}
+
+.footer-disclaimer p {
+    margin: 0;
+    margin-left: 170px; 
+    font-size: 15px;
+    margin-right: 160px;
+    font-weight: 200;
+}
+
+.footer-disclaimer a {
+    color: #d0ddd8; /* Link color */
+    text-decoration: none; /* Remove text underline */
+}
+
+.footer-disclaimer a:hover {
+    color: #fff; /* Change color on hover if desired */
+}
+
+
+/* .footer-disclaimer h3 {
+ 
+
+    margin: 0;
+    margin-left: 170px; 
+    font-size: 15px;
+    font-size: 18px; 
+    color: #fff; 
+} */
+
+/* disclaimer setting end */
+
+
+
+
+
+/* footer styling end */
+
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+	display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+	background: #fff;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	color: #4169e1;
+}
+
+a:visited {
+	color: #800080;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #191970;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Navigation
+--------------------------------------------- */
+.main-navigation {
+	display: block;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	display: block;
+	left: auto;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: flex;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main
+.posts-navigation,
+.site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+}
+
+.comment-navigation .nav-links,
+.posts-navigation .nav-links,
+.post-navigation .nav-links {
+	display: flex;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	flex: 1 0 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	text-align: end;
+	flex: 1 0 50%;
+}
+
+/* Posts and pages
+--------------------------------------------- */
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* Widgets
+--------------------------------------------- */
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Media
+--------------------------------------------- */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/* Captions
+--------------------------------------------- */
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Galleries
+--------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
