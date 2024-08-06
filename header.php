@@ -86,11 +86,11 @@ function your_theme_custom_logo() {
                 <?php get_search_form(); ?>
             </div>
         </div>
-        <button class="hamburger" aria-label="Toggle menu">
+        <!-- <button class="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </button> -->
     </header><!-- #masthead -->
 
     <div id="primary" class="content-area">
